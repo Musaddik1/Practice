@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+      <context:annotation-config/>
+       <!--  <bean id="departmentFinancial" class="com.example.demo.Financial">
+        <property name="departmentName" value="Financial"></property>
+        </bean> -->
+        <bean id="department" class="com.example.demo.Marketing">
+        <property name="departmentName" value="Marketing"></property>
+        </bean>
+        <bean id="employee" class="com.example.demo.Employee" autowire="byName">
+    <!--     <property name="department" ref="departmentFinancial"></property> -->
+        <property name="name" value="Musaddik"></property>
+        <property name="id" value="1"></property>
+        <property name="salary" value="12000"></property>
+        <property name="mobile">
+        <map>
+        <entry key="1" value="9823139449"/>
+        <entry key="2" value="9623978513"></entry>
+        </map>
+        
+        </property>
+        
+        </bean> 
+      <!--   <bean id="departmentFinancial" class="com.example.demo.Financial">
+        <constructor-arg name="departmentName" value="Financial"></constructor-arg>
+        </bean>
+        <bean id="departmentMarketing" class="com.example.demo.Marketing">
+        <constructor-arg name="departmentName" value="Marketing"></constructor-arg>
+        </bean>
+        <bean id="employee" class="com.example.demo.Employee">
+         <constructor-arg name="department">
+        <ref bean="departmentMarketing"/>
+        </constructor-arg>
+        <constructor-arg name="name" value="Musaddik"></constructor-arg>
+       
+        <constructor-arg name="id" value="1"></constructor-arg>
+        <constructor-arg name="salary" value="12000"></constructor-arg>
+        <constructor-arg name="mobile">
+        <map>
+        <entry key="1" value="9823139449"></entry>
+        <entry key="2" value="9623978513"></entry>
+        </map>
+        
+        </constructor-arg>
+        
+        </bean> -->
+</beans>

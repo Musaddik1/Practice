@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+  
+  <bean id="addressObject" class="com.example.Student.Address">
+  <property name="city" value="pune"></property>
+  </bean>
+  <bean id="student" class="com.example.Student.Student">
+  <property name="name" value="musaddik"></property>
+  <property name="address" ref="addressObject"></property>
+  <property name="array">
+  <array>
+  <value>9623078513</value>
+  <value>9923139449</value>
+  </array>
+  </property>
+  
+  </bean>
+  
+  
+  </beans>
